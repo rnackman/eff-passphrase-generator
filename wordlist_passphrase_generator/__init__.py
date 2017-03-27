@@ -1,2 +1,1 @@
-from .generator import passphrase
-from .generator import get_passphrase
+from .generator import Generator
