@@ -1,4 +1,8 @@
 #!/usr/bin/env python
-
-import wordlist_passphrase_generator
-print wordlist_passphrase_generator.passphrase()
+from sys import argv
+from wordlist_passphrase_generator import Generator
+wordlist_url = 'https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt'
+if(len(argv) > 0):
+    wordlist_url = argv[1]
+gen = Generator(wordlist_url)
+print gen.passphrase()
